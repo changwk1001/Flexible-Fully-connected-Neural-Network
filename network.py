@@ -42,7 +42,7 @@ class neuralnetwork():
         self.node_value = list()
         self.node_value.append(x)
         for i in range(self.numberoflayer - 1):
-            self.node_value.append(self._activation(self.node_value[i].dot(self.w[i]) ,derivative='off'))
+            self.node_value.append(self._activation(self.node_value[i].dot(self.w[i] + self.b[i]) ,derivative='off'))
         return self.node_value[-1]
     
     def _lossfunction(self,y_enc,output,derivative):

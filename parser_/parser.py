@@ -35,5 +35,4 @@ def get_parser():
     parser.add_argument("-rs", "--regulation_strength", default=0.01, type=float,
                         help="Deside the strength of your regulation")
     
-    print(parser.args)
     return parser
